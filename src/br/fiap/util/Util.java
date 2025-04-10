@@ -88,4 +88,14 @@ public class Util {
         showMessageDialog(null, "CNPJ não castrado");
         return null;
     }
+    private void pesquisar() {
+        String aux = "";
+
+        Fornecedor fornecedor = pesquisarFornecedor();
+        if (fornecedor != null) {
+            aux += "Fornecedor: " + fornecedor.getNome() + "\n";
+            aux += "CNPJ: " + fornecedor.getCnpj() + "\n";
+            showMessageDialog(null, aux);
+        }
+    }
 }
